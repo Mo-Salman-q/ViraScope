@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberGuard — Scanner UI</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">CS</div>
+    <div class="title">
+        <h1>CyberGuard — Scanner UI</h1>
+        <p>Quick vulnerability scanning and triage dashboard</p>
+    </div>
+</header>
+
+<main>
+    <section class="scan-panel">
+        <h2>Start a New Scan</h2>
+        <input type="text" id="urlInput" placeholder="Enter target URL (e.g. https://example.com)">
+        <button id="scanBtn">🚀 Start Scan</button>
+        <div id="status" class="pulse"></div>
+        <div class="loader hidden" id="loader"></div>
+    </section>
+
+    <section id="resultsCard" class="results-panel hidden">
+        <h3>Scan Results</h3>
+        <div id="summary" class="hidden">
+            <p id="stats"></p>
+        </div>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Engine</th>
+                    <th>Result</th>
+                    <th>Version</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section id="rawCard" class="raw-panel hidden">
+        <h3>Raw JSON Response</h3>
+        <pre id="rawJson"></pre>
+    </section>
+</main>
+
+<footer>
+    CyberGuard • Prototype UI — replace mock handlers with real API endpoints
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

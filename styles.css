@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom right, indigo, pink);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+section:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: indigo;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: darkslateblue;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.malicious {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.suspicious {
+    color: #f0ad4e;
+    font-weight: bold;
+}
+
+.harmless {
+    color: #5cb85c;
+    font-weight: bold;
+}
+
+pre {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#status {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+/* Pulse animation for status */
+.pulse {
+    animation: pulseAnim 1.5s infinite;
+}
+@keyframes pulseAnim {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Loader animation */
+.loader {
+    margin-top: 10px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid indigo;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
