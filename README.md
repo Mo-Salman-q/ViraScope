@@ -46,3 +46,6 @@ git clone https://github.com/YOUR_USERNAME/cyberguard.git
 cd cyberguard
 git clone https://github.com/YOUR_USERNAME/cyberguard.git
 cd cyberguard
+
+for testing : http://www.eicar.org/download/eicar.com
+
